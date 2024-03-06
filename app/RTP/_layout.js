@@ -1,13 +1,9 @@
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet} from 'react-native';
+import RTPListNotes from './RTPListNotes';
 
 const RTP = () => {
   return (
-    <SafeAreaView>
-        <View>
-            <Text>RTP</Text>
-        </View>
-    </SafeAreaView>
+    <RTPListNotes />
   )
 }
 

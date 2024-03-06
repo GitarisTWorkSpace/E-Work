@@ -1,13 +1,9 @@
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import TPListNotes from './TPListNotes';
 
 const TP = () => {
   return (
-    <SafeAreaView>
-        <View>
-            <Text>TP</Text>
-        </View>
-    </SafeAreaView>
+    <TPListNotes />
   )
 }
 

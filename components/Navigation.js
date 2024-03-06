@@ -1,10 +1,17 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { router } from 'expo-router'
 
 const Navigation = (props) => {
   return (
     <View style={styles.navBar}>
-        <Pressable onPress={() => {console.log('Перейти в ТП')}} style={styles.button}>
+        <Pressable onPress={() => 
+            {
+                router.push({
+                    pathname: '/TP/',
+                });
+                console.log('Перейти в ТП');
+            }} style={styles.button}>
             <View style={styles.noteTitle}>
                 <Text style={styles.textTitle}>ТП</Text>
             </View>
@@ -14,7 +21,13 @@ const Navigation = (props) => {
                 </View>
             </View>
         </Pressable>
-        <Pressable onPress={() => {console.log('Перейти в ГПП')}} style={styles.button}>
+        <Pressable onPress={() => 
+            {
+                router.push({
+                    pathname: '/GPP/',
+                });
+                console.log('Перейти в ГПП');
+            }} style={[styles.button, styles.centerButton]}>
             <View style={styles.noteTitle}>
                 <Text style={styles.textTitle}>ГПП</Text>
             </View>
@@ -24,7 +37,13 @@ const Navigation = (props) => {
                 </View>
             </View>
         </Pressable>
-        <Pressable onPress={() => {console.log('Перейти в РТП')}} style={styles.button}>
+        <Pressable onPress={() => 
+            {
+                router.push({
+                    pathname: '/RTP/',
+                });
+                console.log('Перейти в РТП');
+            }} style={styles.button}>
             <View style={styles.noteTitle}>
                 <Text style={styles.textTitle}>РТП</Text>
             </View>
@@ -44,6 +63,8 @@ const styles = StyleSheet.create({
     navBar:{
         height: 80,
         width: '100%',
+        position: 'absolute',
+        bottom: 0,
         backgroundColor: '#eee',
         flexDirection: 'row',
     },
@@ -52,9 +73,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#000',
-        borderStyle: 'solid',
-        borderWidth: 2,
+        borderTopWidth: 2,
+    },
+    centerButton:{
+        borderLeftWidth: 2,
+        borderRightWidth: 2,
     },
     noteTitle: {
         flex: 1,
@@ -72,7 +95,6 @@ const styles = StyleSheet.create({
     },
     countBorder: {
         borderWidth: 2,
-        borderColor: '#222',
         borderRadius: 15,
         height: 40,
         width: 40,

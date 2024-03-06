@@ -1,13 +1,9 @@
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import GPPListNotes from './GPPListNotes';
 
 const GPP = () => {
   return (
-    <SafeAreaView>
-        <View>
-            <Text>GPP</Text>
-        </View>
-    </SafeAreaView>
+    <GPPListNotes />
   )
 }
 

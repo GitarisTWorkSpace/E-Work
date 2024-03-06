@@ -8,12 +8,10 @@ import HomePage from '../components/HomePage';
 const Home = () => {
   return (
     <SafeAreaView style={styles.main}>
-        <View style={styles.container}>
-            <Header title={"Главная страница"}/>
-            <HomePage/>           
-            <Navigation TPNoteCount={99} GPPNoteCount={99} RTPNoteCount={99}/>
-            <StatusBar style="auto"/>
-        </View>
+      <Header title={"Главная страница"}/>
+      <HomePage/>           
+      <Navigation TPNoteCount={99} GPPNoteCount={99} RTPNoteCount={99}/>
+            {/* <StatusBar style="auto"/> */}
     </SafeAreaView>
   )
 }
@@ -21,5 +19,9 @@ const Home = () => {
 export default Home
 
 const styles = StyleSheet.create({
-
+  main: {
+    flex: 1,
+    display: 'flex',
+    alignItems: 'flex-start',
+  },
 })

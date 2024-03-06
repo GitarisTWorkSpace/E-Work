@@ -18,6 +18,9 @@ const styles = StyleSheet.create({
       backgroundColor: '#eee',
       justifyContent: 'center',
       alignItems: 'center',
+      position: 'absolute',
+      top: 0,
+      borderBottomWidth: 2,
     },
     text : {
       fontSize: 20,
