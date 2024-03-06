@@ -1,22 +1,25 @@
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StyleSheet, Text, View } from 'react-native'
 import { StatusBar } from 'expo-status-bar';
-import { Link } from 'expo-router';
+import Header from '../components/Header';
+import Navigation from '../components/Navigation';
+import HomePage from '../components/HomePage';
 
-const HomePage = () => {
+const Home = () => {
   return (
-    <SafeAreaView>
-        <View>
-            <Text>Home Page Now</Text>
-            <Link href={"/GPP/"}>Go to Gpp</Link>
-            <Link href={"/TP/"}>Go to TP</Link>
-            <Link href={"/RTP/"}>Go to Rtp</Link>
-            <StatusBar style="auto" />
+    <SafeAreaView style={styles.main}>
+        <View style={styles.container}>
+            <Header title={"Главная страница"}/>
+            <HomePage/>           
+            <Navigation TPNoteCount={99} GPPNoteCount={99} RTPNoteCount={99}/>
+            <StatusBar style="auto"/>
         </View>
     </SafeAreaView>
   )
 }
 
-export default HomePage
+export default Home
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+})
