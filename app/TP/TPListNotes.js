@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Navigation from '../../components/Navigation';
 import DateBox from '../../components/DateBox';
 import AddNote from '../../components/AddNote';
+import { router } from 'expo-router';
 
 const TPListNotes = () => {
     return (
@@ -21,7 +22,12 @@ const TPListNotes = () => {
                     <Text style={styles.noteTitleText}>ТП - 1488</Text>
                 </Pressable>
             </ScrollView>
-            <AddNote addNote = { () => {console.log('Новая ТП заметка')} }/>
+            <AddNote addNote = { () => {
+                router.push({
+                    pathname: '/TPNote/1'
+                })
+                console.log('Новая ТП заметка')
+                }}/>
             <Navigation TPNoteCount={99} GPPNoteCount={99} RTPNoteCount={99}/>
         </SafeAreaView>
       )

@@ -1,4 +1,5 @@
 import { Pressable, StyleSheet, Text, ScrollView } from 'react-native';
+import { router } from 'expo-router';
 import Header from '../../components/Header';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Navigation from '../../components/Navigation';
@@ -21,7 +22,12 @@ const RTPListNotes = () => {
                 <Text style={styles.noteTitleText}>РТП - 1488</Text>
             </Pressable>
         </ScrollView>
-        <AddNote addNote = { () => {console.log('Новая РТП заметка')} }/>
+        <AddNote addNote = { () => {
+            router.push({
+                pathname: '/TPNote/1'
+            })
+            console.log('Новая РТП заметка')
+            }}/>
         <Navigation TPNoteCount={99} GPPNoteCount={99} RTPNoteCount={99}/>
     </SafeAreaView>
   )
