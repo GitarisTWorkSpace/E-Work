@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import NoteHeader from '../NoteHeader';
 import NoteTitle from '../NoteTitle';
 import TimeBox from '../TimeBox';
+import NoteControl from '../NoteControl';
 
 const TpNote = (props) => {
     const [indexNote, setIndexNote] = useState(1111);
@@ -45,7 +46,7 @@ const TpNote = (props) => {
     }
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.main}>
             <NoteHeader title={'ТП - ' + indexNote} />
             <NoteTitle />
             <TimeBox />
@@ -83,6 +84,7 @@ const TpNote = (props) => {
                     <Text style={styles.text}> ;</Text>
                 </View>
             </View>
+            <NoteControl />
         </SafeAreaView>
     )
 }
@@ -90,6 +92,9 @@ const TpNote = (props) => {
 export default TpNote;
 
 const styles = StyleSheet.create({
+    main: {
+        flex: 1
+    },
     box:{
         backgroundColor: '#eee',
         marginTop: 20,

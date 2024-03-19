@@ -12,13 +12,25 @@ const TPListNotes = () => {
             <Header title={"ТП"}/>
             <DateBox />
             <ScrollView style={styles.noteList}>
-                <Pressable style={styles.noteButton}>
+                <Pressable style={styles.noteButton} onPress={() => {
+                    router.push({
+                        pathname: '/TPNote/228',
+                    });
+                }}>
                     <Text style={styles.noteTitleText}>ТП - 228</Text>
                 </Pressable>
-                <Pressable style={styles.noteButton}>
+                <Pressable style={styles.noteButton} onPress={() => {
+                    router.push({
+                        pathname: '/TPNote/1337'
+                    });
+                }}>
                     <Text style={styles.noteTitleText}>ТП - 1337</Text>
                 </Pressable>
-                <Pressable style={styles.noteButton}>
+                <Pressable style={styles.noteButton} onPress={() => {
+                    router.push({
+                        pathname: '/TPNote/1488'
+                    });
+                }}>
                     <Text style={styles.noteTitleText}>ТП - 1488</Text>
                 </Pressable>
             </ScrollView>
