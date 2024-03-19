@@ -8,14 +8,40 @@ import TimeBox from '../TimeBox';
 const TpNote = (props) => {
     const [indexNote, setIndexNote] = useState(1111);
 
-    let widthOilFirtInput = 150;
+    const [widthOilFirstInput, setWidthOilFirstInput] = useState(100);
+    const [widthOilSecondInput, setWidthOilSecondInput] = useState(100);
 
-    const saveOilFirt = (number) => {
+    const [widthTempFirstInput, setWidthTempFirstInput] = useState(100);
+    const [widthTempSecondInput, setWidthTempSecondInput] = useState(100);
+
+    // const changeWidthInput = (number, count, maxWidth, setWidth) => {
+    //     if (number.length > count){
+    //         setNumber(100 + (number.length - count) * 10);
+    //     } else if ()
+    // }
+
+    const saveOilFirst = (number) => {
         console.log(number)
-        if (number.length > 6){
-            widthOilFirtInput = 100 + (number.length - 6) * 10
-            console.log(widthOilFirtInput);
+        if (number.length > 8){
+            setWidthOilFirstInput(100 + (number.length - 8) * 10);
+            console.log(widthOilFirstInput);
         }
+    }
+
+    const saveOilSecond = (number) => {
+        console.log(number)
+        if (number.length > 8){
+            setWidthOilSecondInput(100 + (number.length - 8) * 10);
+            console.log(widthOilSecondInput);
+        }
+    }
+
+    const saveTempFirst = (number) => {
+
+    }
+
+    const saveTempSecond = (number) => {
+
     }
 
     return (
@@ -23,15 +49,38 @@ const TpNote = (props) => {
             <NoteHeader title={'ТП - ' + indexNote} />
             <NoteTitle />
             <TimeBox />
-            <View style={styles.oilBox}>
-                <Text style={styles.oilBoxText}>Уровень масла :</Text>
-                <View style={styles.oilBoxInputs}>
+            <View style={styles.box}>
+                <Text style={styles.titleText}>Уровень масла :</Text>
+                <View style={styles.boxInputs}>
                     <TextInput 
-                        style={[styles.textInput, {width: widthOilFirtInput}]}
-                        onChangeText={saveOilFirt}
+                        style={[styles.textInput, {width: widthOilFirstInput}]}
+                        onChangeText={saveOilFirst}
                         keyboardType='numeric'
                     />
-                    <Text style={styles.oilBoxText}> | </Text>
+                    <Text style={styles.text}> | </Text>
+                    <TextInput 
+                        style={[styles.textInput, {width: widthOilSecondInput}]}
+                        onChangeText={saveOilSecond}
+                        keyboardType='numeric'
+                    />
+                    <Text style={styles.text}> ;</Text>
+                </View>
+            </View>
+            <View style={styles.box}>
+                <Text style={styles.titleText}>Уровень масла :</Text>
+                <View style={styles.boxInputs}>
+                    <TextInput 
+                        style={[styles.textInput, {width: widthTempFirstInput}]}
+                        onChangeText={saveTempFirst}
+                        keyboardType='numeric'
+                    />
+                    <Text style={styles.text}> | </Text>
+                    <TextInput 
+                        style={[styles.textInput, {width: widthTempSecondInput}]}
+                        onChangeText={saveTempSecond}
+                        keyboardType='numeric'
+                    />
+                    <Text style={styles.text}> ;</Text>
                 </View>
             </View>
         </SafeAreaView>
@@ -41,18 +90,21 @@ const TpNote = (props) => {
 export default TpNote;
 
 const styles = StyleSheet.create({
-    oilBox:{
+    box:{
         backgroundColor: '#eee',
         marginTop: 20,
         paddingLeft: 15,
         paddingRight: 15,
     },
-    oilBoxText:{
+    titleText:{
         fontSize: 20,
         marginTop: 6,
         marginBottom: 5,
     },
-    oilBoxInputs:{
+    text:{
+        fontSize: 24,
+    },
+    boxInputs:{
         flexDirection: 'row',
     },
     textInput:{
