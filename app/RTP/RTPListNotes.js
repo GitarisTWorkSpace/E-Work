@@ -12,19 +12,31 @@ const RTPListNotes = () => {
         <Header title={"РТП"}/>
         <DateBox />
         <ScrollView style={styles.noteList}>
-            <Pressable style={styles.noteButton}>
+            <Pressable style={styles.noteButton} onPress={() => {
+                router.push({
+                    pathname: '/RTPNote/1111'
+                });
+            }}>
                 <Text style={styles.noteTitleText}>РТП - 1111</Text>
             </Pressable>
-            <Pressable style={styles.noteButton}>
+            <Pressable style={styles.noteButton} onPress={() => {
+                router.push({
+                    pathname: '/RTPNote/2222'
+                });
+            }}>
                 <Text style={styles.noteTitleText}>РТП - 2222</Text>
             </Pressable>
-            <Pressable style={styles.noteButton}>
+            <Pressable style={styles.noteButton} onPress={() => {
+                router.push({
+                    pathname: '/RTPNote/3333'
+                });
+            }}>
                 <Text style={styles.noteTitleText}>РТП - 3333</Text>
             </Pressable>
         </ScrollView>
         <AddNote addNote = { () => {
             router.push({
-                pathname: '/TPNote/1'
+                pathname: '/RTPNote/1'
             })
             console.log('Новая РТП заметка')
             }}/>

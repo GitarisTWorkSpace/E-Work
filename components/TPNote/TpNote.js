@@ -6,45 +6,10 @@ import NoteTitle from '../Note/NoteTitle';
 import TimeBox from '../Note/TimeBox';
 import NoteControl from '../Note/NoteControl';
 import NoteToNote from '../Note/NoteToNote';
+import FlexTextInput from '../Note/FlexTextInput';
 
 const TpNote = (props) => {
     const [indexNote, setIndexNote] = useState(1111);
-
-    const [widthOilFirstInput, setWidthOilFirstInput] = useState(100);
-    const [widthOilSecondInput, setWidthOilSecondInput] = useState(100);
-
-    const [widthTempFirstInput, setWidthTempFirstInput] = useState(100);
-    const [widthTempSecondInput, setWidthTempSecondInput] = useState(100);
-
-    // const changeWidthInput = (number, count, maxWidth, setWidth) => {
-    //     if (number.length > count){
-    //         setNumber(100 + (number.length - count) * 10);
-    //     } else if ()
-    // }
-
-    const saveOilFirst = (number) => {
-        console.log(number)
-        if (number.length > 8){
-            setWidthOilFirstInput(100 + (number.length - 8) * 10);
-            console.log(widthOilFirstInput);
-        }
-    }
-
-    const saveOilSecond = (number) => {
-        console.log(number)
-        if (number.length > 8){
-            setWidthOilSecondInput(100 + (number.length - 8) * 10);
-            console.log(widthOilSecondInput);
-        }
-    }
-
-    const saveTempFirst = (number) => {
-
-    }
-
-    const saveTempSecond = (number) => {
-
-    }
 
     const [noteIsClose, setNoteIsClose] = useState(false);
     const [noteDisplayStatuse, setNoteDisplayStatuse] = useState('none');
@@ -67,34 +32,34 @@ const TpNote = (props) => {
             <View style={styles.box}>
                 <Text style={styles.titleText}>Уровень масла :</Text>
                 <View style={styles.boxInputs}>
-                    <TextInput 
-                        style={[styles.textInput, {width: widthOilFirstInput}]}
-                        onChangeText={saveOilFirst}
-                        keyboardType='numeric'
-                    />
+                    <FlexTextInput
+                    widthInput={100}
+                    heightInput={30}
+                    onChangeText={(text) => {console.log(text)}}
+                    keyboardType={'numeric'}/>
                     <Text style={styles.text}> | </Text>
-                    <TextInput 
-                        style={[styles.textInput, {width: widthOilSecondInput}]}
-                        onChangeText={saveOilSecond}
-                        keyboardType='numeric'
-                    />
+                    <FlexTextInput
+                    widthInput={100}
+                    heightInput={30}
+                    onChangeText={(text) => {console.log(text)}}
+                    keyboardType={'numeric'}/>
                     <Text style={styles.text}> ;</Text>
                 </View>
             </View>
             <View style={styles.box}>
                 <Text style={styles.titleText}>Уровень масла :</Text>
                 <View style={styles.boxInputs}>
-                    <TextInput 
-                        style={[styles.textInput, {width: widthTempFirstInput}]}
-                        onChangeText={saveTempFirst}
-                        keyboardType='numeric'
-                    />
+                    <FlexTextInput
+                    widthInput={100}
+                    heightInput={30}
+                    onChangeText={(text) => {console.log(text)}}
+                    keyboardType={'numeric'}/>
                     <Text style={styles.text}> | </Text>
-                    <TextInput 
-                        style={[styles.textInput, {width: widthTempSecondInput}]}
-                        onChangeText={saveTempSecond}
-                        keyboardType='numeric'
-                    />
+                    <FlexTextInput
+                    widthInput={100}
+                    heightInput={30}
+                    onChangeText={(text) => {console.log(text)}}
+                    keyboardType={'numeric'}/>
                     <Text style={styles.text}> ;</Text>
                 </View>
             </View>

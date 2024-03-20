@@ -1,4 +1,5 @@
 import { Pressable, StyleSheet, Text, ScrollView } from 'react-native';
+import { router } from 'expo-router';
 import Header from '../../components/Header';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Navigation from '../../components/Navigation';
@@ -11,17 +12,34 @@ const GPPListNotes = () => {
         <Header title={"ГПП"}/>
         <DateBox />
         <ScrollView style={styles.noteList}>
-            <Pressable style={styles.noteButton}>
+            <Pressable style={styles.noteButton} onPress={() => {
+                router.push({
+                    pathname: '/GPPNote/1111'
+                });
+            }}>
                 <Text style={styles.noteTitleText}>ГПП - 1111</Text>
             </Pressable>
-            <Pressable style={styles.noteButton}>
+            <Pressable style={styles.noteButton} onPress={() => {
+                router.push({
+                    pathname: '/GPPNote/2222'
+                });
+            }}>
                 <Text style={styles.noteTitleText}>ГПП - 2222</Text>
             </Pressable>
-            <Pressable style={styles.noteButton}>
+            <Pressable style={styles.noteButton} onPress={() => {
+                router.push({
+                    pathname: '/GPPNote/3333'
+                });
+            }}>
                 <Text style={styles.noteTitleText}>ГПП - 3333</Text>
             </Pressable>
         </ScrollView>
-        <AddNote addNote = { () => {console.log('Новая ГПП заметка')} }/>
+        <AddNote addNote = { () => {
+            router.push({
+                pathname: '/GPPNote/1'
+            })
+            console.log('Новая ГПП заметка')} 
+            }/>
         <Navigation TPNoteCount={99} GPPNoteCount={99} RTPNoteCount={99}/>
     </SafeAreaView>
   )
