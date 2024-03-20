@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import React, { useState } from 'react';
-import ClockSvg from './svg/ClockSvg';
+import ClockSvg from '../svg/ClockSvg';
 
 const TimeBox = () => {
     const [time, setTime] = useState('01:10'); 

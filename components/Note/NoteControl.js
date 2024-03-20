@@ -1,15 +1,15 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import TrashSvg from './svg/TrashSvg';
-import NoteSvg from './svg/NoteSvg';
+import TrashSvg from '../svg/TrashSvg';
+import NoteSvg from '../svg/NoteSvg';
 
-const NoteControl = () => {
+const NoteControl = (props) => {
     return (
         <View style={styles.controlBox}>
             <Pressable style={styles.trashBtn} onPress={() => {console.log('Удалить заметку')}}>
                 <TrashSvg />
             </Pressable>
-            <Pressable style={styles.editBtn} onPress={() => {console.log('Добавить заметку')}}>
+            <Pressable style={styles.editBtn} onPress={props.addNote}>
                 <NoteSvg />
             </Pressable>
         </View>

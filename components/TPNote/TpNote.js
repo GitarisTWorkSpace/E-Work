@@ -1,10 +1,11 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import React, { useState } from 'react';
-import NoteHeader from '../NoteHeader';
-import NoteTitle from '../NoteTitle';
-import TimeBox from '../TimeBox';
-import NoteControl from '../NoteControl';
+import NoteHeader from '../Note/NoteHeader';
+import NoteTitle from '../Note/NoteTitle';
+import TimeBox from '../Note/TimeBox';
+import NoteControl from '../Note/NoteControl';
+import NoteToNote from '../Note/NoteToNote';
 
 const TpNote = (props) => {
     const [indexNote, setIndexNote] = useState(1111);
@@ -43,6 +44,19 @@ const TpNote = (props) => {
 
     const saveTempSecond = (number) => {
 
+    }
+
+    const [noteIsClose, setNoteIsClose] = useState(false);
+    const [noteDisplayStatuse, setNoteDisplayStatuse] = useState('none');
+
+    const openNote = () => {
+        setNoteIsClose(true);
+        setNoteDisplayStatuse('flex');
+    }
+
+    const closeNote = () => {
+        setNoteIsClose(false);
+        setNoteDisplayStatuse('none');            
     }
 
     return (
@@ -84,7 +98,8 @@ const TpNote = (props) => {
                     <Text style={styles.text}> ;</Text>
                 </View>
             </View>
-            <NoteControl />
+            <NoteControl addNote={openNote}/>
+            <NoteToNote closeNote={closeNote} noteIsClose={noteDisplayStatuse}/>
         </SafeAreaView>
     )
 }

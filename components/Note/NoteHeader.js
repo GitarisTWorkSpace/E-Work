@@ -1,6 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { router } from 'expo-router'
+import BackSvg from '../svg/BackSvg'
 
 const NoteHeader = (props) => {
   return (
@@ -9,6 +10,7 @@ const NoteHeader = (props) => {
             router.back();
             console.log('Назад')
         }}>
+            <BackSvg />
             <Text style={styles.backText}>Назад</Text>
         </Pressable>
         <Text style={styles.text}>{props.title}</Text>
@@ -34,12 +36,16 @@ const styles = StyleSheet.create({
       fontSize: 20,
     },
     backButton: {
-        backgroundColor: '#fff',
         height: 30,
         width: 80,
         position: 'absolute',
         left: 25,
+        flexDirection: 'row',
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'flex-start',
+        alignItems: 'center'
+    },
+    backText: {
+      fontSize: 16,
     }
 })

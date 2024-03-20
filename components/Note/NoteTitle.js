@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
-import EditSvg from './svg/EditSvg'
+import EditSvg from '../svg/EditSvg'
 
 const NoteTitle = (props) => {
     return (

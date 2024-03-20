@@ -14,24 +14,24 @@ const TPListNotes = () => {
             <ScrollView style={styles.noteList}>
                 <Pressable style={styles.noteButton} onPress={() => {
                     router.push({
-                        pathname: '/TPNote/228',
+                        pathname: '/TPNote/1111',
                     });
                 }}>
-                    <Text style={styles.noteTitleText}>ТП - 228</Text>
+                    <Text style={styles.noteTitleText}>ТП - 1111</Text>
                 </Pressable>
                 <Pressable style={styles.noteButton} onPress={() => {
                     router.push({
-                        pathname: '/TPNote/1337'
+                        pathname: '/TPNote/2222'
                     });
                 }}>
-                    <Text style={styles.noteTitleText}>ТП - 1337</Text>
+                    <Text style={styles.noteTitleText}>ТП - 2222</Text>
                 </Pressable>
                 <Pressable style={styles.noteButton} onPress={() => {
                     router.push({
-                        pathname: '/TPNote/1488'
+                        pathname: '/TPNote/3333'
                     });
                 }}>
-                    <Text style={styles.noteTitleText}>ТП - 1488</Text>
+                    <Text style={styles.noteTitleText}>ТП - 3333</Text>
                 </Pressable>
             </ScrollView>
             <AddNote addNote = { () => {

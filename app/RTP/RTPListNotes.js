@@ -13,13 +13,13 @@ const RTPListNotes = () => {
         <DateBox />
         <ScrollView style={styles.noteList}>
             <Pressable style={styles.noteButton}>
-                <Text style={styles.noteTitleText}>РТП - 228</Text>
+                <Text style={styles.noteTitleText}>РТП - 1111</Text>
             </Pressable>
             <Pressable style={styles.noteButton}>
-                <Text style={styles.noteTitleText}>РТП - 1337</Text>
+                <Text style={styles.noteTitleText}>РТП - 2222</Text>
             </Pressable>
             <Pressable style={styles.noteButton}>
-                <Text style={styles.noteTitleText}>РТП - 1488</Text>
+                <Text style={styles.noteTitleText}>РТП - 3333</Text>
             </Pressable>
         </ScrollView>
         <AddNote addNote = { () => {

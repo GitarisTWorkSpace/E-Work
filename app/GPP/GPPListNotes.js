@@ -12,13 +12,13 @@ const GPPListNotes = () => {
         <DateBox />
         <ScrollView style={styles.noteList}>
             <Pressable style={styles.noteButton}>
-                <Text style={styles.noteTitleText}>ГПП - 228</Text>
+                <Text style={styles.noteTitleText}>ГПП - 1111</Text>
             </Pressable>
             <Pressable style={styles.noteButton}>
-                <Text style={styles.noteTitleText}>ГПП - 1337</Text>
+                <Text style={styles.noteTitleText}>ГПП - 2222</Text>
             </Pressable>
             <Pressable style={styles.noteButton}>
-                <Text style={styles.noteTitleText}>ГПП - 1488</Text>
+                <Text style={styles.noteTitleText}>ГПП - 3333</Text>
             </Pressable>
         </ScrollView>
         <AddNote addNote = { () => {console.log('Новая ГПП заметка')} }/>
