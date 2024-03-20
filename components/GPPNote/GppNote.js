@@ -33,6 +33,7 @@ const GppNote = () => {
               <ZRY1/>
               <ZRY2/>
               <ORY/>
+              <View style={styles.endBox}></View>
           </ScrollView>
           <NoteControl addNote={openNote}/>
           <NoteToNote closeNote={closeNote} noteIsClose={noteDisplayStatuse}/>
@@ -45,5 +46,8 @@ export default GppNote
 const styles = StyleSheet.create({
   main: {
     flex: 1
+  },
+  endBox: {
+    marginBottom: 100
   }
 })

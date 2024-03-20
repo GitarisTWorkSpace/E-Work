@@ -16,7 +16,7 @@ const ORY = () => {
                   heightInput={30}
                   onChangeText={(text) => {console.log(text)}}
                   keyboardType={'numeric'}/>
-                <Text style={styles.text}> ; авт</Text>
+                <Text style={styles.text}> ; </Text>
                 <Text style={styles.text}>ку </Text>
                 <FlexTextInput
                   widthInput={75}
@@ -42,7 +42,7 @@ const ORY = () => {
                   heightInput={30}
                   onChangeText={(text) => {console.log(text)}}
                   keyboardType={'numeric'}/>
-                <Text style={styles.text}> ; авт</Text>
+                <Text style={styles.text}> ; </Text>
                 <Text style={styles.text}>ку </Text>
                 <FlexTextInput
                   widthInput={75}
@@ -68,7 +68,7 @@ const ORY = () => {
                   heightInput={30}
                   onChangeText={(text) => {console.log(text)}}
                   keyboardType={'numeric'}/>
-                <Text style={styles.text}> ; авт</Text>
+                <Text style={styles.text}> ; </Text>
                 <Text style={styles.text}>ку </Text>
                 <FlexTextInput
                   widthInput={75}
@@ -94,7 +94,7 @@ const ORY = () => {
                   heightInput={30}
                   onChangeText={(text) => {console.log(text)}}
                   keyboardType={'numeric'}/>
-                <Text style={styles.text}> ; авт</Text>
+                <Text style={styles.text}> ; </Text>
                 <Text style={styles.text}>ку </Text>
                 <FlexTextInput
                   widthInput={75}
@@ -132,7 +132,7 @@ const ORY = () => {
                   widthInput={200}
                   heightInput={30}
                   onChangeText={(text) => {console.log(text)}}
-                  keyboardType={'numeric'}/>
+                  keyboardType={'default'}/>
                 <Text style={styles.text}> охл.</Text>
             </View>
         </View>
@@ -157,7 +157,7 @@ const ORY = () => {
                   widthInput={200}
                   heightInput={30}
                   onChangeText={(text) => {console.log(text)}}
-                  keyboardType={'numeric'}/>
+                  keyboardType={'default'}/>
                 <Text style={styles.text}> охл.</Text>
             </View>
         </View>
@@ -182,7 +182,7 @@ const ORY = () => {
                   widthInput={200}
                   heightInput={30}
                   onChangeText={(text) => {console.log(text)}}
-                  keyboardType={'numeric'}/>
+                  keyboardType={'default'}/>
                 <Text style={styles.text}> охл.</Text>
             </View>
         </View>
@@ -207,7 +207,7 @@ const ORY = () => {
                   widthInput={200}
                   heightInput={30}
                   onChangeText={(text) => {console.log(text)}}
-                  keyboardType={'numeric'}/>
+                  keyboardType={'default'}/>
                 <Text style={styles.text}> охл.</Text>
             </View>
         </View>

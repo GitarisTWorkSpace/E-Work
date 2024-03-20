@@ -32,7 +32,7 @@ const RtpNote = () => {
           <NoteHeader title={'РТП - ' + indexNote} />
           <NoteTitle />
           <TimeBox />
-          <ScrollView>
+          <ScrollView style={styles.scroll}>
           <View style={styles.rowBox}>
               <Text style={styles.titleTextBottom}>Готовность АВР</Text>
               <Checkbox 
@@ -167,8 +167,9 @@ const RtpNote = () => {
                     onChangeText={(text) => {console.log(text)}}
                     keyboardType={'numeric'}/>
                   <Text style={styles.text}> В;</Text>
-              </View>
+              </View>              
           </View>
+          <View style={styles.endBox}></View>
           </ScrollView>
           <NoteControl addNote={openNote}/>
           <NoteToNote closeNote={closeNote} noteIsClose={noteDisplayStatuse}/>
@@ -181,6 +182,9 @@ export default RtpNote
 const styles = StyleSheet.create({
     main: {
         flex: 1
+    },
+    endBox: {
+      marginBottom: 100
     },
     rowBox: {
         flexDirection: 'row',

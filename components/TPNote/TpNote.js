@@ -47,7 +47,7 @@ const TpNote = (props) => {
                 </View>
             </View>
             <View style={styles.box}>
-                <Text style={styles.titleText}>Уровень масла :</Text>
+                <Text style={styles.titleText}>Температура :</Text>
                 <View style={styles.boxInputs}>
                     <FlexTextInput
                     widthInput={100}
