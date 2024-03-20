@@ -5,7 +5,6 @@ import TrashInNoteSvg from '../svg/TrashInNoteSvg'
 
 const NoteToNote = (props) => {
 
-
     const saveNote = (text) => {
         console.log(text.length);
     }
@@ -76,10 +75,11 @@ const styles = StyleSheet.create({
     },
     inputBox: {
         flex: 1,
+        marginLeft: 10,
+        marginRight: 10
     },
     inputText: {
         fontSize: 20,
-        backgroundColor: '#ddd',
-        padding: 10,
+        padding: 10
     }
 })

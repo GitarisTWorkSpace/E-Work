@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import React, { useState } from 'react';
 import NoteHeader from '../Note/NoteHeader';
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     },
     box:{
         backgroundColor: '#eee',
-        marginTop: 20,
+        marginTop: 10,
         paddingLeft: 15,
         paddingRight: 15,
     },
@@ -92,13 +92,4 @@ const styles = StyleSheet.create({
     boxInputs:{
         flexDirection: 'row',
     },
-    textInput:{
-        height: 30,
-        width: 150,
-        backgroundColor: '#B4B4B4',
-        borderBottomWidth: 1,
-        fontSize: 20,
-        paddingLeft: 5,
-        paddingRight: 5,
-    }
 })
