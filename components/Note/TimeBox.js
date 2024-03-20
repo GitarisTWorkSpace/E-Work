@@ -2,7 +2,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import React, { useState } from 'react';
 import ClockSvg from '../svg/ClockSvg';
 
-const TimeBox = () => {
+const TimeBox = (props) => {
     const [time, setTime] = useState('01:10'); 
 
     const timeNow = () => {        
@@ -15,6 +15,7 @@ const TimeBox = () => {
 
     return (
         <View style={styles.timeBox}>
+            <Text style={styles.title}>{props.title}</Text>
             <Text style={styles.timeText}>{time}</Text>
             <Pressable style={styles.clockBtn} onPress={timeNow}>
                 <ClockSvg />
@@ -48,5 +49,9 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    title: {
+        fontSize: 20,
+        marginLeft: 15,
     }
 })
